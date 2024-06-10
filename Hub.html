@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Choices Hub - Diet Genia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333333;
+            background-image: url("C:\\Users\\91824\\Desktop\\food3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            max-height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .buttons a {
+            text-shadow: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Tomato color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul li .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        nav ul li:hover .dropdown-menu {
+            display: block;
+        }
+
+        nav ul li .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav ul li .dropdown-menu a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-section {
+            background-color: rgba(232, 245, 233, 0.9); /* Light green background color with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .content-section h2 {
+            color: #0056b3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .video-item {
+            flex: 1 1 calc(50% - 40px);
+            margin: 10px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .video-item h3 {
+            color: #333;
+        }
+
+        .video-item p {
+            color: #666;
+        }
+
+        .video-item video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .video-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        .btn-services {
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-services:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./food2.jpg" alt="Diet Genia Logo" class="logo">
+        <div class="header-content">
+            <h1><marquee>Welcome to Diet Genia</marquee></h1>
+        </div>
+        <div class="buttons">
+            <a href="login.html" class="btn btn-primary">Login</a>
+            <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown-menu">
+                    <a href="#">Service 1</a>
+                    <a href="#">Service 2</a>
+                    <a href="#">Service 3</a>
+                </div>
+            </li>
+            <li><a href="healthy-choices-hub.html">Healthy Choices Hub</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="content-section">
+            <h2>Healthy Choices Hub</h2>
+            <p>We always provide videos about healthy hub choices on different items according to their valuable season availability and all. Watch the videos below to learn more about making informed choices.</p>
+            <div class="video-content">
+                <div class="video-item">
+                    <video controls>
+                        <source src="watermelon.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Watermelon</h3>
+                    <p>Discover the benefits of organic watermelons and how to choose the best ones.</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="ssaltadulter.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Salt Adulteration</h3>
+                    <p>Learn about the dangers of salt adulteration and how to detect it.</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="foodgrainadult.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Food Grain Adulteration</h3>
+                    <p>Understand the risks associated with food grain adulteration and how to avoid them.</p>
+                </div>
+                    <p>Understand the risks associated with food grain adulteration and how to avoid them.</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="starchadulter.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Starch Adulteration</h3>
+                    <p>Explore the impact of starch adulteration in food products and how to identify them.</p>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-services" onclick="window.location.href='services.html'">Explore More Services</button>
+            <p class="quote">"The greatest wealth is health." - Virgil</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Diet Genia. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
